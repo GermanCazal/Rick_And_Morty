@@ -1,12 +1,12 @@
 import "./App.css";
-import Cards from "./components/Cards.jsx";
-import Nav from "./components/Nav";
-import About from "./components/About";
-import Detail from "./components/Detail";
+import Cards from "./components/Cards/Cards.jsx";
+import Nav from "./components/Nav/Nav";
+import About from "./components/About/About";
+import Detail from "./components/Detail/Detail";
 import { useState } from "react";
 import axios from "axios";
-import { Routes, Route } from "react-router-dom";
-
+import { Routes, Route, useLocation } from "react-router-dom";
+import Form from "./components/Form/form";
 const URL_BASE = "https://be-a-rym.up.railway.app/api/character";
 const API_KEY = "ee420521506a.50f830631b63dee9c86f";
 
@@ -37,6 +37,7 @@ function App() {
       <Nav onSearch={onSearch} />
 
       <Routes>
+        <Route path="/" element={<Form />} />
         <Route
           path="/home"
           element={<Cards characters={characters} onClose={onClose} />}
