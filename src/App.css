@@ -1,3 +1,7 @@
 .App {
    text-align: center;
 }
+
+.background{
+   background-image: ("./img/rick-n-morty-wallpaper.jpg;")
+}

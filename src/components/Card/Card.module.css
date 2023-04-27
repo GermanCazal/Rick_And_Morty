@@ -1,0 +1,62 @@
+
+
+
+.card{
+    background-color: rgba(179, 179, 179, 0.678);
+    width: 300px;
+    height: 500px;
+    transition: 0.3s ease-out;
+    box-shadow: 0 3px 15px rgb(43, 255, 0);
+    width: -4rem;
+    position: relative;
+    border-radius: 2rem;
+   
+}
+
+
+
+.card .content{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    padding: 12px;
+    background: #ff0066;
+    transition: all 0.5s cubic-bezier(.48, -0.28, 041, 1.4);
+    box-sizing: border-box;
+    overflow: hidden;
+    
+}
+
+.card:hover .content{
+    width: 100%;
+    height: 60%;
+    margin-top: 0;
+    border-radius: 0 0 2rem 2rem;
+}
+
+
+.mybuttonasd{
+    background: linear-gradient(to right,#ff0000 ,#f75252);
+    background-color: #ff0000;
+    color: #ffffff;
+    font-family: Verdana;
+    font-size: 8px;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: none;
+    padding: 7px 10px;
+    border: 0px solid #000;
+    border-radius: 100px;
+    display: inline-block;
+    
+   }
+.mybuttonasd:hover{
+    background: linear-gradient(to right,#ff5151 ,#f87070);
+    background-color: #ff5151;
+   }
+.mybuttonasd:active{
+    transform: scale(0.95);
+    
+   }

@@ -1,4 +1,4 @@
-/*..Form{
+.Form{
 position: absolute;
 top: 50%;
 left: 50%;
@@ -41,41 +41,4 @@ input{
     transform: translateY(-50%);
     font-size: 16px;
     pointer-events: none;
-}*/
-
-.Form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  max-width: 500px;
-  padding: 20px;
-  border: 2px solid black;
-  border-radius: 10px;
 }
-
-.label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-
-  .input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-
-  button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }

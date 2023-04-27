@@ -1,6 +1,7 @@
 import { useState } from "react";
 import validation from "./Validate";
 
+
 const Form = ({ login }) => {
     const [errors, setErrors] = useState({});
     const [userData, setUserData] = useState({
@@ -26,7 +27,7 @@ const Form = ({ login }) => {
     }
 
     return(
-        <form onSubmit={handleSubmit}>
+        <form  onSubmit={handleSubmit}>
             <label htmlFor="email" style={{ color: "white"}}>Email: </label>
             <input type="email" name='email' value={userData.email} onChange={handleChange}/>
             {errors.email && <p style={{ color: "red"}}>{errors.email}</p>}
