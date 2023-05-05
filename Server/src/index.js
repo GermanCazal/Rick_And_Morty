@@ -3,6 +3,7 @@ const server = express();
 const router = require("./routes/index");
 const morgan = require("morgan");
 const PORT = 3001;
+const { conn } = require("./DB_connection");
 
 server.use(express.json());
 server.use(morgan("dev"));
@@ -18,8 +19,21 @@ server.use((req, res, next) => {
   next();
 });
 
-server.use("/rickandmorty", router);
+async function startServer() {
+  try {
+    // Sincroniza Sequelize con la base de datos
+    await conn.sync();
 
-server.listen(PORT, () => {
-  console.log(`Server raised in port: ${PORT}`);
-});
+    // Usa el router
+    server.use("/rickandmorty", router);
+
+    // Levanta el servidor
+    server.listen(PORT, () => {
+      console.log(`Server raised in port: ${PORT}`);
+    });
+  } catch (error) {
+    console.error("Error al conectar con la base de datos:", error);
+  }
+}
+
+startServer();

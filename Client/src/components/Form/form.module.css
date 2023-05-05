@@ -1,44 +1,89 @@
-.Form{
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-width: 400px;
-background: rgba(255,255 ,255,0.30);
-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-border-radius: 10px;
-backdrop-filter: blur(4px);
+html{
+  height: 100%;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(#141e30, #243b55);
+}
+
+.login{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 70px;
+  transform: translate(-50%,-50%);
+  background: rgba(255,255 ,255,0.30);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+}
+
+.login .user{
+  position: relative;
+}
+
+.login .user input{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+/* .login .user label{
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #ffffff;
+  pointer-events: none;
+  transition: .5s; 
+} 
+
+
+.login .user input:focus ~ label,
+.login .user input:valid ~ label{
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+} */
+
+button{
+  width: 100px;
+  height: 40px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #000000;
+  font-weight: 500;
 }
 
 
+/* .login .user label{
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;} */
 
-  label {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  input {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1.2rem;
-  }
-input{
-    width: 100%;
-    padding: 0 5px;
-    height: 40px;
-    font-size: 16px;
-    border: none;
-    background: none;
-    outline: none;
-}
-
-.label{
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    color: #adadad;
-    transform: translateY(-50%);
-    font-size: 16px;
-    pointer-events: none;
-}
+  /* .login .user input:focus ~ label,
+.login .user input:valid ~ label{
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;} */
